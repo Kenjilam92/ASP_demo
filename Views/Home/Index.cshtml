@@ -5,7 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
 </head>
+@{List <string> a = new List<string>()
+    {
+        "Apple Pie",
+        "Burritos",
+        "Clams Casino",
+        "Donuts"
+    }; 
+}
+
 <body>
-    <h1>This is the Index view!</h1>
+    <h1>Here are some delicious foods</h1>
+
+    @foreach (var item in a)
+    {
+        if( item[0] == 'C')
+        {
+            <p style="color : red;">@item</p>
+        }
+        else
+        {
+            <p>@item</p>
+        }
+        
+    }
 </body>
 </html>
