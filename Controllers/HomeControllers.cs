@@ -12,9 +12,11 @@ namespace HelloWorld.Controllers
         }
         [HttpGet]
         [Route ("{str}")]
-        public string Index(string str)
+        public IActionResult Index2(string str)
         {
-            return $"This is my {str}";
+            if(str!="projects" && str!="contact")
+                return RedirectToAction("Index");
+            return View($"{str}");
         }
 
     }

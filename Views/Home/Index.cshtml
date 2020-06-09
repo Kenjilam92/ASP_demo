@@ -3,19 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
     <title>Home</title>
 </head>
-@{List <string> a = new List<string>()
+@* @{List <string> a = new List<string>()
     {
         "Apple Pie",
         "Burritos",
         "Clams Casino",
         "Donuts"
     }; 
-}
+} *@
 
 <body>
-    <h1>Here are some delicious foods</h1>
+    @* <h1>Here are some delicious foods</h1>
 
     @foreach (var item in a)
     {
@@ -28,6 +30,29 @@
             <p>@item</p>
         }
         
-    }
+    } *@
+    <div class="container">
+        <div class="row justify-content-center">
+            <nav>
+                <a href="/"> Home </a> |
+                <a href="/projects"> Projects </a> |
+                <a href="contact"> Contact </a>
+            </nav>
+        </div>
+        <h1 class="row justify-content-center"> About me </h1>
+        
+        <div class="row">
+            <div class="col text-center">
+                <img src="https://vignette.wikia.nocookie.net/marvelcentral/images/9/97/Tony-Stark.jpg/revision/latest/scale-to-width-down/340?cb=20130429010603" style="width: 40%;" alt="Iron Man" class="mb-2">
+                <p>Tony Stark</p>
+                <p>I love engineering </p>
+            </div>
+            <div class="col">
+                <p>Sed a nibh vel metus sagittis vulputate a non libero. Fusce sed dui lorem. Praesent accumsan dapibus est, in tincidunt arcu tincidunt a. Nam convallis eros sed tortor viverra finibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur elementum, purus nec dapibus venenatis, arcu neque volutpat lacus, eu luctus massa tellus et nisi. Morbi facilisis et lorem vitae suscipit. In non aliquam mi, nec consectetur quam. Donec lacinia molestie laoreet. Maecenas interdum ut lorem at elementum. Mauris gravida risus vel sollicitudin cursus. In hac habitasse platea dictumst. Duis pulvinar rutrum lacus, ut malesuada eros laoreet consectetur. Praesent molestie mi a viverra porttitor.</p>
+            </div>
+            
+
+        </div>
+    </div>
 </body>
 </html>
